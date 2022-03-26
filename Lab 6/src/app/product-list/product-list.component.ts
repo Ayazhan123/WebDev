@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 import { products } from '../products';
 import { CategoryService } from '../category.service'
@@ -17,24 +19,16 @@ export class ProductListComponent {
     this.currentCategory = this.CategoryService.getCategory();
   }
 
-  onDelete(id: number){
-    products[id - 1].visibility = false;
-  }
-
-  onLike(id: number){
-    products[id - 1].likes++;
-  }
-
-  share(pid: number) {
-    const item = (products.find(item => item.id == pid));
-    window.open(`https://t.me/share/url?url=${item?.link}&text=${item?.name}`);
+  goBack(): void {
+    this.location.back();
   }
   
-  onNotify() {
-    window.alert('You will be notified when the product goes on sale');
-  }
+  constructor(
+    private route: ActivatedRoute,
+    private location: Location,
+    private CategoryService: CategoryService
+  ) { }
 
-  constructor(private CategoryService: CategoryService){}
 }
 
 

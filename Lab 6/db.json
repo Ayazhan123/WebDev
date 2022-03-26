@@ -1,0 +1,84 @@
+{
+    "albums": [
+        {
+            "id": 1,
+            "name": "LG 27GP750-B 27” Ultragear FHD (1920 x 1080) IPS Gaming Monitor"
+},
+          {
+            "id": 2,
+            "name": "HyperX Cloud II Wireless - Gaming Headset"
+},
+          {
+            "id": 3,
+            "name": "Snpurdiri 60% Wired Gaming Keyboard"
+},
+          {
+            "id": 4,
+            "name": "ASUS TUF F17 Gaming Laptop"
+},
+          {
+            "id": 5,
+            "name": "HyperX QuadCast - USB Condenser Gaming Microphone"
+},
+          {
+            "id": 6,
+            "name": "Infantino Lil' Nibble Teethers Carrot"
+},
+          {
+            "id": 7,
+            "name": "Funko Pop! TV: Peacemaker"
+},
+          {
+            "id": 8,
+            "name": "The Original Slinky Walking Spring Toy"
+},
+          {
+            "id": 9,
+            "name": "Pokémon Assorted Cards, 50 Pieces"
+},
+          {
+            "id": 10,
+            "name": "Play-Doh Modeling Compound 10-Pack Case of Colors"
+},
+          {
+            "id": 11,
+            "name": "1984 by George Orwell"
+},
+          {
+            "id": 12,
+            "name": "To Kill a Mockingbird by Harper Lee"
+},
+          {
+            "id": 13,
+            "name": "No Longer Human by Ozamu Dazi"
+},
+          {
+            "id": 14,
+            "name": "The Little Prince by Antoine de Saint-Exupéry"
+},
+          {
+            "id": 15,
+            "name": "Fahrenheit 451 by Ray Bradbury"
+},
+          {
+            "id": 16,
+            "name": "Thriller"
+},
+          {
+            "id": 17,
+            "name": "Musique, Vol. 1 1993 - 2005"
+},
+          {
+            "id": 18,
+            "name": "Pink Moon"
+ },
+          {
+            "id": 19,
+            "name": "Eat Ya Veggies Purple"
+ },
+          {
+            "id": 20,
+            "name": "The Wall"
+ }
+    ]
+  }

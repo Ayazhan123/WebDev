@@ -1,10 +1,12 @@
 <h2>Product Details</h2>
 
 <div *ngIf="product">
-  <img class="image" [src]="product.image"/>
+  <button class = "showImage" (click)="getPhoto()">Photo</button>
   <h3>{{ product.name }}</h3>
   <h4>{{ product.price | currency }}</h4>
   <p>{{ product.description }}</p>
   <h4 *ngIf="product.rating != ''">{{ product.rating }} out of 5</h4>
-  <button type="button" (click)="addToCart(product)">Buy</button>
+</div>
+<div>
+  <button (click)="goBack()">Return back</button>
 </div>

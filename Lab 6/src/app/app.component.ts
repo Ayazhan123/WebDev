@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+// import { AlbumsService } from './albums.service';
+// import { Response } from '@angular/http';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  // albums = []
+
+  // constructor(private albumsService: AlbumsService) {
+
+  // }
+
+//   ngOnInit() {
+//     this.albumsService
+//     .getProducts()
+//     .subscribe((Response) => {
+//       console.log(Response);
+//     });
+//   }
 }
 
 
