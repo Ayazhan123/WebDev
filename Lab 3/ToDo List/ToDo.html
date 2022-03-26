@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo</title>
+    <style>
+        body {
+            background-color: rgb(21, 138, 70);
+            margin: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        #not_box{
+            display: flex;
+            color: #bbf2b5;
+            background-color: rgb(56, 92, 67);
+            height: 58px;
+            width: auto;
+            padding-left: 30%;
+            align-items: center;
+            font-size: 30px;
+            font-family: 'Algerian', 'Old English Text MT', 'Goudy Stout', 'Arial Black';
+        }
+        #not_box2 {
+            background-image: linear-gradient(rgb(56, 92, 67), rgb(21, 138, 70));
+            height: 18px;
+            width: auto;
+        }
+        #not_box3 {
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .box {
+            background-color: white;
+            color: black;
+            width: 40%;
+            min-height: 100px;
+            border-radius: 12px;
+        }   
+        .input_bar {
+            display: flex;
+            margin: 30px 20px;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 15px;
+        }
+        .input_bar input {
+            width: 70%;
+            height: 40px;
+            border: 2px rgb(192, 192, 192) solid;
+            border-radius: 5px;
+            padding: 0 6px;
+            font-size: inherit;
+        }
+        .input_bar button {
+            width: 20%;
+            height: 40px;
+            padding: 0;
+            border: 0;
+            border-radius: 5px;
+            font-weight: 600;
+            color: white;
+            background-color: rgb(72, 196, 123);
+            font-size: inherit;
+        }
+        #tasks {
+            margin: 20px 20px;
+        }
+        .task {
+            display: flex;
+            align-items: center;
+            background-color: rgb(126, 206, 160);
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .task input[type=checkbox] {
+            width: 6%;
+            transform: scale(1.5);
+        }
+        .task div.activity {
+            width: 85%;
+            font-size: 18px;
+        }
+        .task button {
+            width: 34px;
+            height: 34px;
+            border: 0;
+            border-radius: 5px;
+            background-color: rgb(0, 119, 50);
+            margin: 6px 0;
+        }
+        button:hover {
+            cursor: pointer;
+            opacity: 0.85;
+        }
+        
+        </style>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <script>
+            window.onload = function(){
+                document.querySelector('#add').onclick = function(){
+                    if(document.querySelector('.input_bar input').value.length == 0){
+                        alert('Please Enter your task');
+                    }
+                    else{
+                        document.getElementById('tasks').innerHTML += `
+                            <div class="task">
+                                <input class="checkbox" type="checkbox">
+                                <div class="activity">${document.querySelector('.input_bar input').value}</div>
+                                <button class="delete" type="button">
+                                    <i class='fas fa-trash-alt' style="font-size: 15px;"></i>
+                                </button>
+                            </div>
+                        `;
+                        // document.querySelector('.input_bar input').value = "";
+                    }
+                    let deleteButtons = document.querySelectorAll('.delete');
+                    console.log(deleteButtons);
+                    for(var i = 0; i < deleteButtons.length; i++){
+                        deleteButtons[i].onclick = function(){
+                            this.parentNode.remove();
+                        };
+                    };
+                    let text = document.querySelectorAll('.checkbox');
+                    console.log(text);
+                    for(let i = 0; i < text.length; i++){
+                        text[i].onclick = function(){
+                            if(this.checked == true){
+                                this.parentNode.style.textDecoration = 'line-through';
+                            }
+                            else{
+                                this.parentNode.style.textDecoration = 'none';
+                            }
+                        };
+                    }
+                    // let editor = document.querySelectorAll('.activity');
+                    // for(let i = 0; i < editor.length; i++){
+                    //     editor[i].onclick = function(){
+                    //         this.innerHTML = `${document.querySelector('.input_bar input').value}`;
+                    //     }
+                    // }
+                }
+
+            };
+        </script>
+</head>
+<body>
+    <div id="not_box">ToDo List</div>
+    <div id="not_box2"></div>
+    <div id="not_box3">
+        <div class="box">
+            <div class="input_bar">
+                <input type="text" placeholder="New Task" autofocus="1">
+                <button id="add" type="button">Add</button>
+            </div>
+            <div id="tasks">
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
