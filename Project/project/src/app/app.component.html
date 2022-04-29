@@ -1,0 +1,22 @@
+<div *ngIf="isLoggedIn()">
+  <nav class="navbar">
+      <ul>
+          <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+          <li><a routerLink="/albums" routerLinkActive="active">Albums</a></li>
+          <li><a routerLink="/managers" routerLinkActive="active">Managers</a></li>
+          <li><a routerLink="/demands" routerLinkActive="active">Demands</a></li>
+          <li style="float:right"><a routerLink="" (click)="logout()">Logout</a></li>
+      </ul>
+  </nav>
+</div>
+
+<!-- <nav class="navbar">
+  <ul>
+      <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+      <li><a routerLink="/albums" routerLinkActive="active">Albums</a></li>
+      <li><a routerLink="/managers" routerLinkActive="active">Managers</a></li>
+      <li><a routerLink="/demands" routerLinkActive="active">Demands</a></li>
+      <li style="float:right"><a routerLink="" (click)="logout()">Logout</a></li>
+  </ul>
+</nav>
+<router-outlet></router-outlet> -->
