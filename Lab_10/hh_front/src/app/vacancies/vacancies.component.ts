@@ -18,16 +18,6 @@ export class VacanciesComponent implements OnInit {
               private location: Location) { }
 
   ngOnInit(): void {
-    this.getVacancies();
-  }
-
-  getVacancies() {
-    this.route.paramMap.subscribe((params) => {
-      const id = Number(vacancies.find(vacancies => vacancies.company));
-      this.vacancyService.getVacancies(id).subscribe((vacancies) => {
-        this.vacancies = vacancies;
-      })
-    })
   }
 
   goBack() {
