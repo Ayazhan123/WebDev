@@ -1,0 +1,88 @@
+
+<div class="third-page container2">
+
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="https://img-gorod.ru/uf/41/217/41217.jpg" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="https://img-gorod.ru/uf/41/391/41391.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="https://img-gorod.ru/uf/41/277/41277.jpg" alt="Third slide">
+      </div>
+
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+</div>
+
+
+<div class="about-us container2">
+
+  <h1 class="about-us-main-text">О нас</h1>
+
+  <p class="about-us-text">«Читай-город» – это самая большая в России сеть книжных магазинов и интернет-магазин. Компания входит в объединённую розничную сеть «Читай-город» – «Гоголь-Моголь» – «Буквоед».
+
+    Мы не просто продаём книги, а разделяем любовь наших покупателей к чтению. Нам знакомо чувство, когда хорошие романы заканчиваются слишком быстро, времени в дороге не хватает, чтобы дочитать главу, а героиня никак не может найти свою любовь. Мы знаем, как быстро летит время в компании с новинкой любимого автора и как сильно хочется растянуть это удовольствие.
+    
+    Помимо книг в «Читай-городе» можно найти канцтовары, сладости, подарочную упаковку и идеи для сюрпризов близким. Мы сами разрабатываем дизайны для многих ежедневников, закладок, товаров для творчества и других интересных вещей, поэтому кроме как в «Читай-городе» их больше нигде не найти.</p>
+
+</div>
+
+
+
+<div class="Top-Products-page container2">
+
+  <div class="top-products-nav">
+
+    <div class="top-products-nav-left">
+
+      <p>ТОП ПРОДУКТЫ</p>
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="main-page-books-cont">
+
+    <div *ngFor="let book of books" routerLink="/book/{{book.id}}" class="top-products-books-example" id="top-products-books-last">
+
+      <img src="{{book.image}}" alt="TopProducts" class="top-products-books-img">
+
+      <p class="top-products-books-name">{{book.category}}</p>
+
+      <p class="top-products-books-price">${{book.price}}</p>
+
+
+    </div>
+
+
+  </div>
+
+
+  </div>
+
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Regular link</a>
+    <a class="dropdown-item active" href="#">Active link</a>
+    <a class="dropdown-item" href="#">Another link</a>
+  </div>
+
+
+
+<footer>
+
+</footer>
